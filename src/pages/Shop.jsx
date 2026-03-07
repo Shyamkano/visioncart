@@ -92,12 +92,6 @@ export default function ShopPage() {
             <div className="shop-main-content">
 
                 {/* === FILTERS SIDEBAR === */}
-                <button
-                    className="mobile-filter-toggle"
-                    onClick={() => document.querySelector('.filters').classList.toggle('active')}
-                >
-                    <ShoppingCart size={16} /> Filters
-                </button>
                 <aside className="filters">
                     <div className="filter-group">
                         <h3>Price</h3>
@@ -128,8 +122,14 @@ export default function ShopPage() {
 
                 {/* --- Main Content --- */}
                 <main className="main-content">
-                    {/* === CONTROLS (FULLY RESTORED) === */}
+                    {/* === CONTROLS === */}
                     <div className="shop-controls">
+                        <button
+                            className="mobile-filter-toggle"
+                            onClick={() => document.querySelector('.filters').classList.toggle('active')}
+                        >
+                            <ShoppingCart size={16} /> Filters
+                        </button>
                         <input type="text" placeholder="Search by name..." className="search-bar" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                         <select className="sort-dropdown" value={sortOrder} onChange={e => setSortOrder(e.target.value)}>
                             <option value="">Sort By</option>
