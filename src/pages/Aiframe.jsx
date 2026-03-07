@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './AIFrame.css';
+import './Aiframe.css';
 import { Camera, Video, Share2, RefreshCw } from 'lucide-react';
 
 // Mock Data for Frames
@@ -21,7 +21,7 @@ const AIFrame = () => {
         try {
             // Request access to the user's webcam
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            
+
             // If we have the videoRef and the stream, attach the stream to the video element
             if (videoRef.current) {
                 videoRef.current.srcObject = stream;
@@ -57,7 +57,7 @@ const AIFrame = () => {
         } else {
             stopWebcam();
         }
-        
+
         // Cleanup function: this will be called when the component unmounts
         return () => {
             stopWebcam();
