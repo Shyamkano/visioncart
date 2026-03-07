@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Aiframe.css';
 import { Camera, Video, Share2, RefreshCw } from 'lucide-react';
+import WayfarerImg from '../assets/glasses/Wayfarer.png';
+import AviatorImg from '../assets/glasses/Aviator.png';
+import RoundImg from '../assets/glasses/Round.png';
+import CateyeImg from '../assets/glasses/Cateye.png';
 
 // Mock Data for Frames
 const framesData = [
-    { id: 1, name: 'Wayfarer', image: 'src/assets/glasses/Wayfarer.png' },
-    { id: 2, name: 'Aviator', image: 'src/assets/glasses/Aviator.png' },
-    { id: 3, name: 'Round', image: 'src/assets/glasses/Round.png' },
-    { id: 4, name: 'Cat-Eye', image: 'src/assets/glasses/Cateye.png' },
+    { id: 1, name: 'Wayfarer', image: WayfarerImg },
+    { id: 2, name: 'Aviator', image: AviatorImg },
+    { id: 3, name: 'Round', image: RoundImg },
+    { id: 4, name: 'Cat-Eye', image: CateyeImg },
 ];
 
 const AIFrame = () => {
