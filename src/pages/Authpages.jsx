@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase'; // Make sure this path points to your supabaseClient.js
 import { Eye, EyeOff, Mail, Lock, User, Sparkles, ArrowRight, LogIn, UserPlus } from 'lucide-react';
-import './AuthPage.css';
+import './Authpage.css';
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -98,7 +98,7 @@ const AuthPage = () => {
               <UserPlus size={18} /> Sign Up
             </button>
           </div>
-          
+
           {/* Display Error Messages */}
           {error && <p className="error-message">{error}</p>}
 
