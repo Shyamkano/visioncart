@@ -1,0 +1,153 @@
+/* --- General Container --- */
+.vision-health-container {
+  padding: 120px 20px 40px;
+  background-color: #111827; /* Dark theme background */
+  color: #d1d5db; /* Default light text color */
+}
+
+/* --- Header --- */
+.vision-health-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.vision-health-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff; /* White text for header */
+}
+
+.vision-health-header p {
+  font-size: 18px;
+  color: #9ca3af; /* Lighter gray for subtext */
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* --- Grid Layouts --- */
+.user-info-grid,
+.vision-health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider cards */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* --- General Card Styling --- */
+.user-info-card,
+.vision-health-card {
+  background-color: #1f2937; /* Lighter dark for cards */
+  border: 1px solid #374151; /* Subtle border */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-info-card:hover,
+.vision-health-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Card Headers --- */
+.user-info-card h3,
+.vision-health-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  margin-right: 12px;
+  color: #3b82f6; /* Blue icon color */
+  width: 24px;
+  height: 24px;
+}
+
+/* --- User Info Cards Content --- */
+.user-info-card p {
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+.eyesight-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.eye-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.eye-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.checkup-date {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* --- Health Score Widget --- */
+.health-score-card {
+  text-align: center;
+}
+
+.health-score-circle {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto 20px auto;
+  border-radius: 50%;
+  border: 10px solid #3b82f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #3b82f6;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(31, 41, 55, 0) 70%);
+}
+
+.score-hint {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* --- Update Prescription Button --- */
+.user-info-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #374151;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-info-card button:hover {
+  background-color: #4b5563;
+}
+
+/* --- Prescription Form Styling (if you add one) --- */
+.prescription-form {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #374151;
+}

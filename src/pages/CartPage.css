@@ -1,0 +1,228 @@
+/* --- General Container --- */
+.cart-container {
+  background-color: #f9fafb;
+  color: #111827;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cart-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 20px 40px;
+}
+
+.cart-header {
+  margin-bottom: 40px;
+}
+
+.cart-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* --- Main Two-Column Layout --- */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- Cart Items List --- */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item-card {
+  display: grid;
+  grid-template-columns: 150px 1fr auto auto;
+  /* Image | Details | Price | Remove Btn */
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.cart-item-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.item-details .item-brand {
+  font-size: 13px;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.item-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  text-align: right;
+}
+
+.remove-item-btn {
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.remove-item-btn:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+/* --- Order Summary Card --- */
+.cart-summary {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  position: sticky;
+  /* Makes it stay in place on scroll */
+  top: 120px;
+}
+
+.cart-summary h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-row,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.summary-row span:first-child {
+  color: #6b7280;
+}
+
+.summary-row span:last-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+.summary-total {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  background-color: #238636;
+  /* Green for checkout */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #2ea043;
+}
+
+.checkout-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* --- Empty Cart & Loading States --- */
+.empty-cart,
+.loading-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #6b7280;
+}
+
+.empty-cart p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+.primary-btn {
+  /* Reusable button style for "Continue Shopping" */
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+    /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-item-card {
+    grid-template-columns: 80px 1fr auto;
+    /* Smaller image, remove price column */
+    grid-template-rows: auto auto;
+    gap: 10px 16px;
+  }
+
+  .cart-item-card img {
+    grid-row: 1 / span 2;
+    height: 80px;
+  }
+
+  .item-price {
+    grid-column: 2;
+    text-align: left;
+    color: #8b949e;
+  }
+
+  .remove-item-btn {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}

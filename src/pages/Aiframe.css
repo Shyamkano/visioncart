@@ -1,0 +1,210 @@
+/* General Container & Font */
+.aiframe-container {
+  padding: 100px 20px 40px;
+  max-width: 1400px;
+  margin: auto;
+  font-family: "JetBrains Mono", monospace;
+  background-color: #f9fafb; /* Light background for contrast */
+  margin: auto;
+}
+
+/* Header */
+.aiframe-header {
+  text-align: center;
+  /* margin-bottom: 40px; */
+}
+
+.aiframe-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+  margin: 40px;
+}
+
+.aiframe-header p {
+  font-size: 18px;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* Main Content Layout */
+.aiframe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .aiframe-content {
+    flex-direction: row;
+  }
+}
+
+/* Video Container */
+.aiframe-video-container {
+  flex: 3; /* Takes more space */
+  width: 100%;
+  aspect-ratio: 16 / 10; /* Maintain a consistent shape */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111827; /* Dark background for video */
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Important for video element */
+}
+
+.video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #9ca3af;
+}
+
+.video-placeholder p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.start-camera-btn {
+  padding: 12px 24px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.start-camera-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Overlays on the video */
+.face-shape-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.control-btn {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.control-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Frames & Recommendations Sidebar */
+.aiframe-sidebar {
+  flex: 1;
+  width: 100%;
+  min-width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.aiframe-sidebar h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px;
+}
+
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for frames */
+  gap: 16px;
+  max-height: 400px;
+  overflow-y: auto; /* Make it scrollable if there are many frames */
+}
+
+.frame-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.frame-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.frame-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+}
+
+.frame-card:hover {
+  border-color: #9ca3af;
+}
+
+.frame-card.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* Recommendations */
+.recommendation-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.recommendation-section p {
+  font-size: 16px;
+  color: #6b7280;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}

@@ -1,0 +1,159 @@
+/* ============================================= */
+/* 1. CSS Custom Properties (Variables)          */
+/* ============================================= */
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-dark: #1e4ed8;
+  --color-background: #f9f9f9;
+  --color-surface: #ffffff; /* For cards, navbars, etc. */
+
+  --text-dark: #000000;
+  --text-medium: #555;
+  --text-light: #666;
+
+  --border-color-light: #ddd;
+  --border-color-medium: #ccc;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.12);
+  
+  --font-sans: 'Inter', Arial, sans-serif; /* Recommended to use a better font like Inter */
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}
+
+/* ============================================= */
+/* 2. Global Resets & Base Styles                */
+/* ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--color-background);
+  color: #111827;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================= */
+/* 3. Shared Components (e.g., Navbar)           */
+/* ============================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: whitesmoke;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+/* ============================================= */
+/* 4. Reusable Utility Classes                   */
+/* ============================================= */
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-blue-dark);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border-color: var(--border-color-medium);
+  color: white;
+}
+
+.secondary-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+/* ----- Card ----- */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ----- Container for Layout ----- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
