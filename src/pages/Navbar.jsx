@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen(prev => !prev);
   };
 
   const closeMenu = () => {
